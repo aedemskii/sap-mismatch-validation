@@ -12,11 +12,15 @@ const LoadingSpinner: React.FC = () => {
 			textRef.current?.classList.add('is-visible');
 		};
 
-		window.addEventListener('load', showText);
+		setTimeout(() => {
+			showText();
+		}, 5000);
 
-		return () => {
-			window.removeEventListener('load', showText);
-		};
+		// window.addEventListener('load', showText);
+
+		// return () => {
+		// 	window.removeEventListener('load', showText);
+		// };
 	}, [dispatch])
 
 	return (

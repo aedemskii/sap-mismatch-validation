@@ -9,20 +9,22 @@ const App: React.FC = () => {
 
 	useEffect(() => {
 		const handleKeyDown = (e: KeyboardEvent) => {
-		  if (e.key === 'Enter') {
-			document.removeEventListener('keydown', handleKeyDown);
-			dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
-		  }
+			if (e.key === 'Enter') {
+				document.removeEventListener('keydown', handleKeyDown);
+				dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
+			}
 		};
 
-		const handleLoad = () => {
-		  document.addEventListener('keydown', handleKeyDown);
-		};
+		// const handleLoad = () => {
+		setTimeout(() => {
+			document.addEventListener('keydown', handleKeyDown);
+		}, 5000);
+		// };
 
-		window.addEventListener('load', handleLoad);
+		// window.addEventListener('load', handleLoad);
 
 		return () => {
-			window.removeEventListener('load', handleLoad);
+			// window.removeEventListener('load', handleLoad);
 			document.removeEventListener('keydown', handleKeyDown);
 		};
 	  }, [dispatch]);
