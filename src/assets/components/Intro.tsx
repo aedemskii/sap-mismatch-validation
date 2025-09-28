@@ -11,21 +11,24 @@ const Intro: React.FC = () => {
 		if (state.value === APP_STATE.INTRO) {
 			introRef.current?.classList.add('on-show');
 
-			setTimeout(() => {
-				document.addEventListener('keydown', (e) => {
-					if (e.key === 'Enter') {
-						dispatch({ type: APP_REDUCER_ACTION.GO_TO_TRANSITION });
+			const handleKeyDown = (e: KeyboardEvent) => {
+				if (e.key === 'Enter') {
+					document.removeEventListener('keydown', handleKeyDown);
+					dispatch({ type: APP_REDUCER_ACTION.GO_TO_TRANSITION });
 
-						setTimeout(() => {
-							dispatch({
-								type: APP_REDUCER_ACTION.GO_TO_SLIDE,
-								payload: {
-									slideIndex: 1
-								}
-							});
-						}, 1000);
-					}
-				});
+					setTimeout(() => {
+						dispatch({
+							type: APP_REDUCER_ACTION.GO_TO_SLIDE,
+							payload: {
+								slideIndex: 1
+							}
+						});
+					}, 1000);
+				}
+			};
+
+			setTimeout(() => {
+				document.addEventListener('keydown', handleKeyDown);
 			}, 3000);
 		}
 	}, [state.value, dispatch]);

@@ -8,14 +8,25 @@ const App: React.FC = () => {
 	const { state, dispatch } = useAppContext();
 
 	useEffect(() => {
-		window.addEventListener('load', () => {
-			document.addEventListener('keydown', (e) => {
-				if (e.key === 'Enter') {
-					dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
-				}
-			});
-		});
-	}, [dispatch])
+		const handleKeyDown = (e: KeyboardEvent) => {
+		  if (e.key === 'Enter') {
+			document.removeEventListener('keydown', handleKeyDown);
+			dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
+		  }
+		};
+
+		const handleLoad = () => {
+		  document.addEventListener('keydown', handleKeyDown);
+		};
+
+		window.addEventListener('load', handleLoad);
+
+		return () => {
+		  // снимаем оба обработчика при размонтировании
+		  window.removeEventListener('load', handleLoad);
+		  document.removeEventListener('keydown', handleKeyDown);
+		};
+	  }, [dispatch]);
 
 	return (
 		<div
