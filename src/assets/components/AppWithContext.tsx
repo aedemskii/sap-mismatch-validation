@@ -22,9 +22,8 @@ const App: React.FC = () => {
 		window.addEventListener('load', handleLoad);
 
 		return () => {
-		  // снимаем оба обработчика при размонтировании
-		  window.removeEventListener('load', handleLoad);
-		  document.removeEventListener('keydown', handleKeyDown);
+			window.removeEventListener('load', handleLoad);
+			document.removeEventListener('keydown', handleKeyDown);
 		};
 	  }, [dispatch]);
 

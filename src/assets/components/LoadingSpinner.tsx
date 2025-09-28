@@ -8,11 +8,15 @@ const LoadingSpinner: React.FC = () => {
 	const textRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		window.addEventListener('load', () => {
-			if (textRef.current) {
-				textRef.current.classList.add('is-visible');
-			}
-		});
+		const showText = () => {
+			textRef.current?.classList.add('is-visible');
+		};
+
+		window.addEventListener('load', showText);
+
+		return () => {
+			window.removeEventListener('load', showText);
+		};
 	}, [dispatch])
 
 	return (

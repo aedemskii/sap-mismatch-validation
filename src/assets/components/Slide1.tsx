@@ -32,9 +32,12 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
 					});
 				}
 			}, 200)
-		// } else {
-		// 	// Pause the video when the slide is no longer active
-		// 	videoElement.pause();
+		}
+
+		return () => {
+			if (videoElement) {
+				videoElement.pause();
+			}
 		}
 	}, [isActive]);
 

@@ -30,6 +30,10 @@ const Intro: React.FC = () => {
 			setTimeout(() => {
 				document.addEventListener('keydown', handleKeyDown);
 			}, 3000);
+
+			return () => {
+				document.removeEventListener('keydown', handleKeyDown);
+			};
 		}
 	}, [state.value, dispatch]);
 
