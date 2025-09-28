@@ -82,7 +82,7 @@
 }
 
 .mini-slider__item strong {
-	color: var(--color--lightblue);
+	color: var(--color--x);
 }
 
 .mini-slider.on-0 .mini-slider__item[data-index="0"],

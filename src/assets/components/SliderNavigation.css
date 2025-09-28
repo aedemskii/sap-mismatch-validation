@@ -51,7 +51,7 @@
 	border-top: var(--project--border);
 	border-right: var(--project--border);
 	border-width: 3px;
-	border-color: var(--color--lightblue);
+	border-color: var(--color--x);
 	transform: rotate(-45deg);
 	transition: border-color var(--project--std);
 }
@@ -101,7 +101,7 @@ li.slider__slide-btn {
 	gap: 6px;
 	border-radius: 14px;
 	border: var(--project--border);
-	background-color: var(--color--blue);
+	background-color: var(--color--darkx);
 	transition-property: font-weight, box-shadow, background-color;
 	transition-duration: 0.5s, 0.5s, var(--project--std);
 	white-space: nowrap;
@@ -114,7 +114,7 @@ li.slider__slide-btn::before {
 
 li.slider__slide-btn:hover,
 li.slider__slide-btn:active {
-	background-color: var(--color--lightblue);
+	background-color: var(--color--x);
 }
 
 li.slider__slide-btn.current {

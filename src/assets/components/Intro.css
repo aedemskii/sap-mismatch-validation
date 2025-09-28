@@ -50,7 +50,7 @@
 	text-align: right;
 	font-size: 20px;
 	font-weight: 700;
-	color: var(--color--lightblue);
+	color: var(--color--x);
 	font-style: italic;
 }
 
@@ -81,7 +81,7 @@
 .intro__button {
 	font-size: 30px;
 	cursor: pointer;
-	background-color: var(--color--blue);
+	background-color: var(--color--darkx);
 	border: var(--project--border);
 	border-radius: var(--project--br);
 	padding: 10px 20px 12px;
@@ -94,7 +94,7 @@
 
 .intro__button:hover,
 .intro__button:active {
-	background-color: var(--color--lightblue);
+	background-color: var(--color--x);
 }
 
 .intro__background {

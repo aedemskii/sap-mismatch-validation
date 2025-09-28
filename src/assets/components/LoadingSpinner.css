@@ -1,7 +1,7 @@
 .loading-spinner {
 	--preloader--outer-size: 120px;
 	--preloader--inner-size: 60px;
-	--preloader--square-1-color: var(--color--blue);
+	--preloader--square-1-color: var(--color--darkx);
 	--preloader--square-2-color: var(--color--whitish);
 
 	position: fixed;
@@ -19,7 +19,7 @@
 	top: 30%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: var(--color--lightblue);
+	color: var(--color--x);
 	font-size: 28px;
 	font-weight: 500;
 	opacity: 0;
