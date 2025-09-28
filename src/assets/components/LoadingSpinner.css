@@ -14,7 +14,7 @@
 	transition: opacity 0.3s ease-in-out;
 }
 
-.loading-spinner__text {
+/* .loading-spinner__text {
 	position: absolute;
 	top: 30%;
 	left: 50%;
@@ -22,7 +22,7 @@
 	color: var(--color--lightblue);
 	font-size: 28px;
 	font-weight: 500;
-}
+} */
 
 .loading-spinner::before {
 	content: '';
