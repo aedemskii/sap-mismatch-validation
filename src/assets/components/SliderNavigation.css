@@ -104,6 +104,7 @@ li.slider__slide-btn {
 	background-color: var(--color--blue);
 	transition-property: font-weight, box-shadow, background-color;
 	transition-duration: 0.5s, 0.5s, var(--project--std);
+	white-space: nowrap;
 }
 
 li.slider__slide-btn::before {
