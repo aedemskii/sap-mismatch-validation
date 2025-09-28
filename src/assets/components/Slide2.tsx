@@ -25,7 +25,7 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
 			data-slide='2'
 			>
 			<div className='slide__background'>
-				<img src={`${import.meta.env.BASE_URL}/images/slide2-bg2.png`} alt='' />
+				<img src={`${import.meta.env.BASE_URL}/images/slide2-bg.png`} alt='' />
 			</div>
 
 			<div className='slide__content'>

@@ -9,11 +9,7 @@ const App: React.FC = () => {
 
 	useEffect(() => {
 		window.addEventListener('load', () => {
-			document.addEventListener('keydown', (e) => {
-				if (e.key === 'Enter') {
-					dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
-				}
-			});
+			dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
 		});
 	}, )
 

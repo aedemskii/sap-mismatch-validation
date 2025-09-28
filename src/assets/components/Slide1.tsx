@@ -51,8 +51,7 @@ const Slide1: React.FC<SlideProps> = ({ isActive }) => {
 					playsInline
 					className='slide__video'
 				>
-					{/* <source src={`${import.meta.env.BASE_URL}/videos/slide1.mp4`} type='video/mp4' /> */}
-					<source src={`${import.meta.env.BASE_URL}/videos/slide1b.mp4`} type='video/mp4' />
+					<source src={`${import.meta.env.BASE_URL}/videos/slide1.mp4`} type='video/mp4' />
 					Your browser does not support the video tag.
 				</video>
 			</div>
