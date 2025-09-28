@@ -8,9 +8,11 @@ const App: React.FC = () => {
 	const { state, dispatch } = useAppContext();
 
 	useEffect(() => {
-		window.addEventListener('load', () => {
+		// window.addEventListener('load', () => {
+		setTimeout(() => {
 			dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
-		});
+		}, 3000);
+		// });
 	}, )
 
 	return (
