@@ -77,7 +77,7 @@
 	left: calc(-1 * var(--offset));
 	width: calc(var(--project--br) + 2 * var(--offset) + 2px);
 	height: calc(var(--project--br) + 2 * var(--offset) + 2px);;
-	background: url('/src/assets/images/br-effect.svg');
+	background: url('/images/br-effect.svg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	transform: rotate(-90deg);

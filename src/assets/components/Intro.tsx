@@ -49,7 +49,7 @@ const Intro: React.FC = () => {
 			className='intro'
 			>
 			<div className='intro__background'>
-				<img src='src/assets/images/intro-bg.png' />
+				<img src={`${import.meta.env.BASE_URL}images/intro-bg.png`} />
 			</div>
 
 			<div className='intro__content'>
