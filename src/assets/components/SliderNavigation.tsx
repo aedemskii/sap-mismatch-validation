@@ -67,6 +67,8 @@ const SliderNavigation: React.FC = () => {
 	}
 
 	const handleSlideBtnClick = (event: React.MouseEvent<HTMLLIElement>) => {
+		const slideBtn = event.currentTarget as HTMLLIElement;
+		slideBtn.classList.add('current');
 		const index = Number(event.currentTarget.dataset.index);
 		goToSlide(index);
 	};

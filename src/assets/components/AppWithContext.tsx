@@ -8,10 +8,14 @@ const App: React.FC = () => {
 	const { state, dispatch } = useAppContext();
 
 	useEffect(() => {
-		setTimeout(() => {
-			dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
-		}, 3000);
-	}, [dispatch]);
+		window.addEventListener('load', () => {
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter') {
+					dispatch({ type: APP_REDUCER_ACTION.SHOW_INTRO });
+				}
+			});
+		});
+	}, [dispatch])
 
 	return (
 		<div
